@@ -1,0 +1,87 @@
+{
+ "kind": "drive#file",
+ "id": "1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H",
+ "etag": "\"_sqIxUq0fTLFIA17mBQDotbHWsg/MTU2NDA0MzA4MjQyOA\"",
+ "selfLink": "https://www.googleapis.com/drive/v2/files/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H",
+ "alternateLink": "https://drive.google.com/drive/folders/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H",
+ "embedLink": "https://drive.google.com/embeddedfolderview?id=1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H",
+ "openWithLinks": {
+  "1095523759147": "https://drive.google.com/drive/folders/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H"
+ },
+ "defaultOpenWithLink": "https://drive.google.com/drive/folders/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H",
+ "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.folder+48+shared",
+ "title": "SOLUTION",
+ "mimeType": "application/vnd.google-apps.folder",
+ "labels": {
+  "starred": false,
+  "hidden": false,
+  "trashed": false,
+  "restricted": false,
+  "viewed": true
+ },
+ "copyRequiresWriterPermission": false,
+ "createdDate": "2018-08-21T00:22:30.920Z",
+ "modifiedDate": "2019-07-25T08:24:42.428Z",
+ "modifiedByMeDate": "2019-07-25T08:24:42.428Z",
+ "lastViewedByMeDate": "2019-07-25T08:24:42.428Z",
+ "markedViewedByMeDate": "1970-01-01T00:00:00.000Z",
+ "version": "25",
+ "parents": [
+  {
+   "kind": "drive#parentReference",
+   "id": "0AIzkVGWQL6-UUk9PVA",
+   "selfLink": "https://www.googleapis.com/drive/v2/files/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H/parents/0AIzkVGWQL6-UUk9PVA",
+   "parentLink": "https://www.googleapis.com/drive/v2/files/0AIzkVGWQL6-UUk9PVA",
+   "isRoot": true
+  }
+ ],
+ "userPermission": {
+  "kind": "drive#permission",
+  "etag": "\"_sqIxUq0fTLFIA17mBQDotbHWsg/iwVU4IfIpYY67YrzWR8-gNolUxQ\"",
+  "id": "me",
+  "selfLink": "https://www.googleapis.com/drive/v2/files/1tCpFWqN9PT0Qgv5vBXfgkDmqJM7qes_H/permissions/me",
+  "role": "owner",
+  "type": "user"
+ },
+ "quotaBytesUsed": "0",
+ "ownerNames": [
+  "LeViX"
+ ],
+ "owners": [
+  {
+   "kind": "drive#user",
+   "displayName": "LeViX",
+   "picture": {
+    "url": "https://lh3.googleusercontent.com/--tIBF-d9zUI/AAAAAAAAAAI/AAAAAAAAAJE/gFb_ZXLgKhQ/s64/photo.jpg"
+   },
+   "isAuthenticatedUser": true,
+   "permissionId": "11433191760129018006",
+   "emailAddress": "levm975@gmail.com"
+  }
+ ],
+ "lastModifyingUserName": "LeViX",
+ "lastModifyingUser": {
+  "kind": "drive#user",
+  "displayName": "LeViX",
+  "picture": {
+   "url": "https://lh3.googleusercontent.com/--tIBF-d9zUI/AAAAAAAAAAI/AAAAAAAAAJE/gFb_ZXLgKhQ/s64/photo.jpg"
+  },
+  "isAuthenticatedUser": true,
+  "permissionId": "11433191760129018006",
+  "emailAddress": "levm975@gmail.com"
+ },
+ "capabilities": {
+  "canCopy": false,
+  "canEdit": true
+ },
+ "editable": true,
+ "copyable": false,
+ "writersCanShare": true,
+ "shared": true,
+ "explicitlyTrashed": false,
+ "appDataContents": false,
+ "spaces": [
+  "drive"
+ ]
+}
+
