@@ -6,8 +6,26 @@
     {% block head %}
 
     {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}"/>
 </head>
 <body>
-
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">Home</a>
+                </li>
+                <li>
+                    <a href="/disk">
+                        List items
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Action</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>

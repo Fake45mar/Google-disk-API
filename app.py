@@ -45,7 +45,7 @@ def home_page():
         # print(e)
 
     # print(service)
-    return res
+    return render_template("base.html")
 
 @app.route('/folder', methods=['GET'])
 def get_children_dir(method='GET'):
