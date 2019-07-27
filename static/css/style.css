@@ -13,11 +13,12 @@ a{
 }
 .wrapper{
     max-width:1920px;
-    min-width:460px;
+    min-width:360px;
     box-sizing: border-box;
     margin:0 auto;
 }
 nav > ul{
+    width:100%;
     display:flex;
 }
 nav > ul > li{
@@ -44,17 +45,16 @@ nav > ul > li:hover{
     background-color: #0066ff;
 }
 .headers{
+    text-align: center;
+    width:33.3%;
     background-color: dimgrey;
     color:white;
-}
-table{
-    width:100%;
 }
 .file,
 .folder{
     width:100%;
     height:50px;
-    background-color: #0066ff;
+    /*background-color: #0066ff;*/
 }
 .folder{
     cursor:pointer;
@@ -66,4 +66,26 @@ table{
 .folder:hover{
     transition: background-color 1s;
     background-color: orange;
+}
+@media only screen
+    and (min-device-width : 375px)
+    and (max-device-width : 667px)
+    and (width : 667px)
+    and (height : 375px)
+{
+    table,
+    nav > ul > li > a{
+        font-size: 30px;
+    }
+    nav,
+    table{
+        width:1129px;
+    /*    Тут обнаружен  косячок, за счет размера таблицы блок имеет ширину меньшуу(ту что необходимо), а таблица растягивается*/
+    }
+    .file,
+    .folder{
+        background-color: red;
+        font-size:30px;
+        height:150px;
+    }
 }

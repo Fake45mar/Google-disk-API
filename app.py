@@ -37,7 +37,6 @@ def list_disk():
     service_v2 = build('drive', 'v2', credentials=creds)
     results = service.files().list(pageSize=1000, fields='nextPageToken,files(id,name, createdTime, mimeType)').execute()#files().list(pageSize=150).execute()
     items = results.get("files")
-    print(items)
     res = {}
     for e in items:
         res[e["id"]] = e
@@ -90,4 +89,4 @@ def get_children_dir(id):
     return render_template("detailsFile.html", list=arr)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8000, debug=True)

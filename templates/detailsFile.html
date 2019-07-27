@@ -3,7 +3,7 @@
 {% block content %}
 
     {% for elem in list %}
-            <tr class="{{ elem.mimeType }}" data-id="{{ elem.id }}">
+            <tr scope="row" class="{{ elem.mimeType }}" data-id="{{ elem.id }}">
                 <td class="{{ elem.mimeType }}" data-id="{{ elem.id }}">{{ elem.title }}</td>
                 <td>{{ elem.mimeType }}</td>
                 <td>{{ elem.createdDate }}</td>
