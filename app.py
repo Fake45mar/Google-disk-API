@@ -52,6 +52,7 @@ def list_disk():
 
 @app.route('/folder/<string:id>', methods=['GET'])
 def get_children_dir(id):
+    print(request.url)
     file = open('credentials.json', 'r')
     creds = None
     if os.path.exists('token.pickle'):
@@ -86,7 +87,6 @@ def get_children_dir(id):
         else:
             res["mimeType"] = 'file'
         arr.append(s)
-    print(arr)
     return render_template("detailsFile.html", list=arr)
 
 if __name__ == '__main__':
