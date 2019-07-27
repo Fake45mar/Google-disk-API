@@ -12,6 +12,10 @@ SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
 
 @app.route('/')
 def home_page():
+    return render_template("base.html")
+
+@app.route('/disk', methods=["GET"])
+def list_disk():
     file = open('credentials.json', 'r')
     creds = None
     if os.path.exists('token.pickle'):
@@ -33,22 +37,21 @@ def home_page():
     service_v2 = build('drive', 'v2', credentials=creds)
     results = service.files().list(pageSize=1000, fields='nextPageToken,files(id,name, createdTime, mimeType)').execute()#files().list(pageSize=150).execute()
     items = results.get("files")
+    print(items)
     res = {}
     for e in items:
         res[e["id"]] = e
-        # date = service.files().get(fileId=e["id"]).execute()
         if "folder" in e["mimeType"]:
             e["mimeType"] = "folder"
 
         else:
             e["mimeType"] = "file"
         # print(e)
-
     # print(service)
-    return render_template("base.html")
+    return render_template("listDisk.html", list=items)
 
-@app.route('/folder', methods=['GET'])
-def get_children_dir(method='GET'):
+@app.route('/folder/<string:id>', methods=['GET'])
+def get_children_dir(id):
     file = open('credentials.json', 'r')
     creds = None
     if os.path.exists('token.pickle'):
@@ -68,12 +71,23 @@ def get_children_dir(method='GET'):
 
     service = build('drive', 'v2', credentials=creds)
     s = build('drive', 'v3', credentials=creds)
-    results = service.children().list(folderId='0B4zkVGWQL6-UfmRUeHpnVzJ3TWZfU2RNMWIyUnEtY01DRTEyTGR5ZmRXdVdsbTdyUFRVTzQ').execute()#list(pageSize=1000).execute()#files().list(pageSize=150).execute()
+    results = service.children().list(folderId=id).execute()#list(pageSize=1000).execute()#files().list(pageSize=150).execute()
     items = results["items"]
+    print(items)
     res = {}
+    arr = []
     for e in items:
-        res[e["id"]] = e
-        print(service.files().get(fileId=e["id"]).execute())
+        s = service.files().get(fileId=e["id"]).execute()
+        res = {}
+        res = s
+        if "folder" in res["mimeType"]:
+            res["mimeType"] = "folder"
+
+        else:
+            res["mimeType"] = 'file'
+        arr.append(s)
+    print(arr)
+    return render_template("detailsFile.html", list=arr)
 
 if __name__ == '__main__':
     app.run()
