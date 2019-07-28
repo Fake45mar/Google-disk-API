@@ -73,7 +73,6 @@ def get_children_dir(id):
     s = build('drive', 'v3', credentials=creds)
     results = service.children().list(folderId=id).execute()#list(pageSize=1000).execute()#files().list(pageSize=150).execute()
     items = results["items"]
-    print(items)
     res = {}
     arr = []
     for e in items:
@@ -89,4 +88,4 @@ def get_children_dir(id):
     return render_template("detailsFile.html", list=arr)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
