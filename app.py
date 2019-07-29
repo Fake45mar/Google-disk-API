@@ -87,5 +87,6 @@ def get_children_dir(id):
         arr.append(s)
     return render_template("detailsFile.html", list=arr)
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

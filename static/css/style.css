@@ -36,9 +36,9 @@ nav > ul > li > a{
     color:dimgrey;
     font-size:18px;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-    display: block;
     box-sizing: border-box;
     padding-top:32px;
+    text-decoration: none;
 }
 nav > ul > li:hover{
     transition: background-color 2s;
